@@ -4,13 +4,13 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
-import java.net.URL;
 import javax.imageio.ImageIO;
 
 public class StickerGenerator {
 
-    public void Generate(InputStream inputStream, String fileName) throws Exception
+    public void Generate(InputStream inputStream, String stickerText, String fileName) throws Exception
     {
+        //Essa função cria uma figurinha (imagem com texto transparente), recebe como argumentos um InputStream de uma imagem, um String do texto da figurinha e o nome do arquivo a ser salvo.
         // leitura da imagem
         BufferedImage imagemOriginal = ImageIO.read(inputStream);
         
@@ -28,7 +28,7 @@ public class StickerGenerator {
         Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 32);
         graphics.setFont(fonte);
         graphics.setColor(Color.CYAN);
-        graphics.drawString("TOPZERA", 0, novaAltura - 100);
+        graphics.drawString(stickerText, 0, novaAltura - 100);
 
         // escrever a nova imagem em um arquivo
         fileName = fileName.replace(":", "-"); // Substitui o ":" por "-" para evitar problemas com o Windows
@@ -36,10 +36,13 @@ public class StickerGenerator {
         ImageIO.write(novaImagem, "png", new File(fileName));
     }
     
+    
+    /*    
     public static void main(String[] args) throws Exception {           
         var gerador = new StickerGenerator();
 
         InputStream inputStream = new URL("https://www.alura.com.br/assets/img/imersao-java/paulo-imersao-java-bio.1657213503.png").openStream();
         gerador.Generate(inputStream, "Figurinha2!!!");
     }
+    */
 }
