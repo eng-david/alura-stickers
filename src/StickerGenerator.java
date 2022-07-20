@@ -40,6 +40,6 @@ public class StickerGenerator {
         var gerador = new StickerGenerator();
 
         InputStream inputStream = new URL("https://www.alura.com.br/assets/img/imersao-java/paulo-imersao-java-bio.1657213503.png").openStream();
-        gerador.Generate(inputStream, "Figurinha!!!");
+        gerador.Generate(inputStream, "Figurinha2!!!");
     }
 }
