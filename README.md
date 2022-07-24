@@ -46,5 +46,19 @@ Além disso foi adicionada compatibilidade com a API da NASA que vai trazer imag
 - `Design Patterns`
 - `Interface Java`
 
+## Aula 4:
+
+![índice](https://user-images.githubusercontent.com/57844726/180670858-2cae7ffe-5c9a-4534-bfb3-c471009f145b.jpg)
+
+Construida uma API REST para expor nosso próprio conteudo dessa vez relacionado as linguagens de programação mais populares, utilizando ferramentas profissionais como o Spring Framework e um banco de dados NoSQL.
+Foi adicionada uma classe extratora para o conteudo da API criada, dessa forma será possivel criar figurinhas com as imagens das linguagens de programação.
+
+### Tecnologias utilizadas:
+- `MAVEN`
+- `SPRING`
+- `REST`
+- `NoSQL`
+- `MongoDB`
+
 
 
