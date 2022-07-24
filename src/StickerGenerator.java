@@ -25,10 +25,10 @@ public class StickerGenerator {
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
         // escrever uma frase na nova imagem
-        Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 32);
+        Font fonte = new Font("Impact", Font.BOLD, 112);
         graphics.setFont(fonte);
         graphics.setColor(Color.CYAN);
-        graphics.drawString(stickerText, 0, novaAltura - 100);
+        graphics.drawString(stickerText, (width/3), novaAltura - 100);
 
         // escrever a nova imagem em um arquivo
         fileName = fileName.replace(":", "-"); // Substitui o ":" por "-" para evitar problemas com o Windows
