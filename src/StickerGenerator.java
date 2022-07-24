@@ -10,7 +10,9 @@ public class StickerGenerator {
 
     public void Generate(InputStream inputStream, String stickerText, String fileName) throws Exception
     {
-        //Essa função cria uma figurinha (imagem com texto transparente), recebe como argumentos um InputStream de uma imagem, um String do texto da figurinha e o nome do arquivo a ser salvo.
+        //  Essa função cria uma figurinha (imagem com texto transparente), recebe como argumentos um InputStream de uma imagem, 
+        //  um String do texto da figurinha e o nome do arquivo a ser salvo.
+
         // leitura da imagem
         BufferedImage imagemOriginal = ImageIO.read(inputStream);
         
@@ -25,10 +27,10 @@ public class StickerGenerator {
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
         // escrever uma frase na nova imagem
-        Font fonte = new Font(Font.SANS_SERIF, Font.BOLD, 32);
+        Font fonte = new Font("Impact", Font.BOLD, 128);
         graphics.setFont(fonte);
         graphics.setColor(Color.CYAN);
-        graphics.drawString(stickerText, 0, novaAltura - 100);
+        graphics.drawString(stickerText, (width/3), novaAltura - 100);
 
         // escrever a nova imagem em um arquivo
         fileName = fileName.replace(":", "-"); // Substitui o ":" por "-" para evitar problemas com o Windows
