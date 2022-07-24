@@ -5,15 +5,10 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception 
     {
-         
-        // Conexão HTTP IMDB
-        // String url = "https://imdb-api.com/en/API/Top250Movies/k_l4vniiwe";
-        //String url = "https://api.mocki.io/v2/549a5d8b";
-        //var extrator = new IMDBContentExtractor();
-
-        // Conexão HTTP NASA
-        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
-        var extrator = new NASAContentExtractor();
+        // Origem do conteudo 
+        API_EXTRATOR myApi = API_EXTRATOR.NASA; // ENUM para selecionar a origem do conteudo com apenas uma linha de código
+        var url = myApi.getUrl();
+        var extrator = myApi.getExtrator();
 
         // Obtem o JSON a partir do URL
         var http = new HTTPClient();
@@ -24,16 +19,16 @@ public class App {
         // exibir e manipular os dados
         var stickerGenerator = new StickerGenerator();
         
-        for (int i = 0; i < 3; i++) 
+        for (int i = 0; i < conteudos.size(); i++) 
         {   
             Content conteudo = conteudos.get(i);
 
             String titulo = conteudo.getTitulo();
             String urlImagem = conteudo.getUrlImagem();
             
-            String notaFilme = conteudo.getImdbRating();
-            String textoFigurinha = "NOTA: " + notaFilme;
-            //String textoFigurinha = "TOPZERA";
+            // String notaFilme = conteudo.getImdbRating();
+            // String textoFigurinha = "NOTA: " + notaFilme;
+            String textoFigurinha = "TOPZERA";
 
             System.out.println(titulo);
 
@@ -44,4 +39,3 @@ public class App {
         }
     }
 }
-
