@@ -29,5 +29,22 @@ Criada a classe StickerGenerator que recebe um InputStream de uma imagem, adicio
 - `Java Graphics2D`
 - `Java InputStream`
 
+## Aula 3:
+![Captura de tela 2022-07-24 171254](https://user-images.githubusercontent.com/57844726/180664212-05142ade-056a-44f6-872c-ee7996bb55a0.png)
+
+O código foi melhorado com as refatorações necessárias para torná-lo mais flexível e fácil de entender, adicionando uma classe de conteudo (content), requisição HTTP, classes extratoras para o IMDB e NASA, e uma interface que abstrai essas extratoras.
+Além disso foi adicionada compatibilidade com a API da NASA que vai trazer imagens astronômicas interessantes.
+
+### Recursos adicionados:
+- Adicionada uma classe Enum que une, como configurações, a URL da API e o extrator utilizado.
+
+### Palavras Chave:
+- `Refatoração`
+- `Clean Code`
+- `Orientação a objetos`
+- `Encapsulamento de código`
+- `Design Patterns`
+- `Interface Java`
+
 
 
