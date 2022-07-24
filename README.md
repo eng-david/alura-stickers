@@ -1,18 +1,32 @@
-## Getting Started
+# Semana da Imersão Java - Alura
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Aula 1:
 
-## Folder Structure
+![2022-07-23 2](https://user-images.githubusercontent.com/57844726/180657572-fd4ee968-5844-4e81-a8b2-14a275178a6a.png)
 
-The workspace contains two folders by default, where:
+Foi feito um app em Java para consumir uma API do site IMDB e baixar um arquivo JSON com a lista dos 250 melhores filmes, esse JSON é parseado e posteriormente impresso de forma organizada no terminal da IDE.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Tecnologias utilizadas: 
+- `Java`
+- `Microservices`
+- `API`
+- `JSON`
+- `Regular Expressions`
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Aula 2:
+![2022-07-23 (1)](https://user-images.githubusercontent.com/57844726/180657899-b1417c99-d066-4381-be7c-05a1688dc8b3.png)
 
-## Dependency Management
+Criada a classe StickerGenerator que recebe um InputStream de uma imagem, adiciona um texto com fundo transparente na imagem e salva o arquivo, que pode ser usada como figurinhas do Whatsapp.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Recursos adicionados:
+- O texto da figurinha será a nota do filme com base na API do IMDB;
+- O texto foi centralizado na figurinha;
+- A fonte do texto foi alterada para "Impact" que é a fonte geralmente utilizada em memes na internet.
+
+### Tecnologias utilizadas:
+- `Java Graphics2D`
+- `Java InputStream`
+
+
+
