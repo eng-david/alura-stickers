@@ -7,6 +7,7 @@
 Foi feito um app em Java para consumir uma API do site IMDB e baixar um arquivo JSON com a lista dos 250 melhores filmes, esse JSON é parseado e posteriormente impresso de forma organizada no terminal da IDE.
 
 ### Tecnologias utilizadas: 
+- `VS Code`
 - `Java`
 - `Microservices`
 - `API`
