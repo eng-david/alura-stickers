@@ -10,7 +10,9 @@ public class StickerGenerator {
 
     public void Generate(InputStream inputStream, String stickerText, String fileName) throws Exception
     {
-        //Essa função cria uma figurinha (imagem com texto transparente), recebe como argumentos um InputStream de uma imagem, um String do texto da figurinha e o nome do arquivo a ser salvo.
+        //  Essa função cria uma figurinha (imagem com texto transparente), recebe como argumentos um InputStream de uma imagem, 
+        //  um String do texto da figurinha e o nome do arquivo a ser salvo.
+
         // leitura da imagem
         BufferedImage imagemOriginal = ImageIO.read(inputStream);
         
