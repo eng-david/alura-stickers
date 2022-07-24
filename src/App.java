@@ -26,14 +26,14 @@ public class App {
             String titulo = conteudo.getTitulo();
             String urlImagem = conteudo.getUrlImagem();
             
-            String notaFilme = conteudo.getImdbRating();
-            String textoFigurinha = "NOTA: " + notaFilme;
+            //String notaFilme = conteudo.getImdbRating();
+            //String textoFigurinha = "NOTA: " + notaFilme;
             //String textoFigurinha = "TOPZERA";
 
             System.out.println(titulo);
 
             InputStream inputStream = new URL(urlImagem).openStream();
-            stickerGenerator.Generate(inputStream, textoFigurinha, titulo); // Gera a figurinha com a imagem do filme
+            stickerGenerator.Generate(inputStream, titulo, titulo); // Gera a figurinha com a imagem do filme
                                     
             System.out.println();
         }
