@@ -28,20 +28,18 @@ public class App {
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
         
         // exibir e manipular os dados
-        var stickerGenerator = new StickerGenerator();
-        
+                
         for (Map<String,String> filme : listaDeFilmes) 
         {
             String nomeFilme = filme.get("title");
             String urlImagem = filme.get("image");
             String notaFilme = filme.get("imDbRating");
-            String textoFigurinha = "NOTA: " + notaFilme;
+            notaFilme = "Classificação IMDB: " + notaFilme;
 
             System.out.println(nomeFilme);
-
-            InputStream inputStream = new URL(urlImagem).openStream();
-            stickerGenerator.Generate(inputStream, textoFigurinha, nomeFilme); // Gera a figurinha com a imagem do filme
-                                    
+            System.out.println(urlImagem);
+            System.out.println(notaFilme);
+                        
             System.out.println();
         }
     }
