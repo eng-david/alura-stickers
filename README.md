@@ -1,4 +1,5 @@
 # Semana da Imersão Java - Alura
+Este projeto foi desenvolvido durante a **semana imersão Java da Alura** e consiste em consumir conteúdo de APIs (próprias ou de terceiros) e gerar imagens personalizadas com fundo transparente, que podem ser utilizadas como stickers (figurinhas) em aplicativos de mensagens.
 
 ## Aula 1:
 
@@ -7,7 +8,7 @@
 Foi feito um app em Java para consumir uma API do site IMDB e baixar um arquivo JSON com a lista dos 250 melhores filmes, esse JSON é parseado e posteriormente impresso de forma organizada no terminal da IDE.
 
 ### Tecnologias utilizadas: 
-- `VS Code`
+- `VS Code IDE`
 - `Java`
 - `Microservices`
 - `API`
