@@ -1,5 +1,5 @@
 # Semana da Imersão Java - Alura
-Este projeto foi desenvolvido durante a **semana imersão Java da Alura** e consiste em consumir conteúdo de APIs (próprias ou de terceiros) e gerar imagens personalizadas com fundo transparente, que podem ser utilizadas como stickers (figurinhas) em aplicativos de mensagens.
+Este projeto foi desenvolvido durante a **semana imersão Java da Alura** e consiste em consumir conteúdo de APIs e gerar imagens personalizadas com fundo transparente, que podem ser utilizadas como stickers (figurinhas) em aplicativos de mensagens.
 
 ## Aula 1:
 
