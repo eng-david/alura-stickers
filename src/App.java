@@ -1,46 +1,39 @@
 import java.io.InputStream;
-import java.net.URI;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
-import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception 
     {
-         
-        // fazer uma conexão HTTP e buscar os top 250 filmes
-        // String url = "https://imdb-api.com/en/API/Top250Movies/k_l4vniiwe";
-        String url = "https://api.mocki.io/v2/549a5d8b";
+        // Origem do conteudo 
+        API_EXTRATOR myApi = API_EXTRATOR.LINGUAGENS; // ENUM para selecionar a origem do conteudo com apenas uma linha de código
+        var url = myApi.getUrl();
+        var extrator = myApi.getExtrator();
+
+        // Obtem o JSON a partir do URL
+        var http = new HTTPClient();
+        String json = http.buscaDados(url);
         
-        var endereço = URI.create(url);
-        var client = HttpClient.newHttpClient();
-        var request = HttpRequest.newBuilder(endereço).GET().build();
-        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        String body = response.body();
-        //System.out.println(body);
-        
-        // extrair só os dados que interessam (título, poster, classificação)
-        var parser = new JsonParser();
-        List<Map<String, String>> listaDeFilmes = parser.parse(body);
+        List<Content> conteudos = extrator.ContentExtract(json);
         
         // exibir e manipular os dados
         var stickerGenerator = new StickerGenerator();
         
-        for (Map<String,String> filme : listaDeFilmes) 
-        {
-            String nomeFilme = filme.get("title");
-            String urlImagem = filme.get("image");
-            String notaFilme = filme.get("imDbRating");
-            String textoFigurinha = "NOTA: " + notaFilme;
+        for (int i = 0; i < conteudos.size(); i++) 
+        {   
+            Content conteudo = conteudos.get(i);
 
-            System.out.println(nomeFilme);
+            String titulo = conteudo.getTitulo();
+            String urlImagem = conteudo.getUrlImagem();
+            
+            //String notaFilme = conteudo.getImdbRating();
+            //String textoFigurinha = "NOTA: " + notaFilme;
+            //String textoFigurinha = "TOPZERA";
+
+            System.out.println(titulo);
 
             InputStream inputStream = new URL(urlImagem).openStream();
-            stickerGenerator.Generate(inputStream, textoFigurinha, nomeFilme); // Gera a figurinha com a imagem do filme
+            stickerGenerator.Generate(inputStream, titulo, titulo); // Gera a figurinha com a imagem do filme
                                     
             System.out.println();
         }
