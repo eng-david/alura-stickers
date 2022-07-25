@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) throws Exception 
     {
         // Origem do conteudo 
-        API_EXTRATOR myApi = API_EXTRATOR.LINGUAGENS; // ENUM para selecionar a origem do conteudo com apenas uma linha de código
+        API_EXTRATOR myApi = API_EXTRATOR.LINGUAGENS; // ENUM para selecionar a origem do conteúdo com apenas uma linha de código
         var url = myApi.getUrl();
         var extrator = myApi.getExtrator();
 
