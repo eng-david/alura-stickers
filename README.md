@@ -62,5 +62,13 @@ Foi adicionada uma classe extratora para o conteudo da API criada, dessa forma s
 - `NoSQL`
 - `MongoDB`
 
+## Aula 5:
 
+![Captura de tela 2022-07-26 114821](https://user-images.githubusercontent.com/57844726/181037937-43eb90b6-4add-4d65-b572-e73573efacce.png)
+
+Foi feito o Deploy da aplicação como um serviço Web na nuvem, utilizando a plataforma Heroku.<br>
+Dessa forma o serviço pode ser acessado por qualquer pessoa na internet através do endereço: https://djr-api-languages.herokuapp.com/languages
+
+### Tecnologias utilizadas:
+- `Heroku PaaS`
 
