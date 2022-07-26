@@ -1,7 +1,8 @@
 public enum API_EXTRATOR {
     IMDB("https://api.mocki.io/v2/549a5d8b", new IMDBContentExtractor()),
     NASA("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14", new NASAContentExtractor()),
-    LINGUAGENS("http://localhost:8080/languages", new LinguagensContentExtractor());
+    // A URL da API linguagens agora será a hospedada no Heroku
+    LINGUAGENS("https://djr-api-languages.herokuapp.com/languages", new LinguagensContentExtractor());
 
     private String url;
     private ContentExtractor extrator;
