@@ -49,7 +49,7 @@ Além disso foi adicionada compatibilidade com a API da NASA que vai trazer imag
 
 ## Aula 4:
 
-![índice](https://user-images.githubusercontent.com/57844726/180670858-2cae7ffe-5c9a-4534-bfb3-c471009f145b.jpg)
+![indice2](https://user-images.githubusercontent.com/57844726/183256574-413c29a7-a1c4-4a3a-aac1-d486d7bc6d9f.jpg)
 
 Construida uma [API REST](https://github.com/eng-david/linguagens-api) para expor nosso próprio conteudo dessa vez relacionado as linguagens de programação mais populares, utilizando ferramentas profissionais como o Spring Framework e um banco de dados NoSQL.<br>
 
