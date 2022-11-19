@@ -1,4 +1,7 @@
 # Semana da Imersão Java - Alura
+
+![Development Status Badge](https://img.shields.io/badge/Status-Concluido-green)
+
 Este projeto foi desenvolvido durante a **semana imersão Java da Alura** e consiste em consumir conteúdo de APIs e gerar imagens personalizadas com fundo transparente, que podem ser utilizadas como stickers (figurinhas) em aplicativos de mensagens.
 
 ## Aula 1:
